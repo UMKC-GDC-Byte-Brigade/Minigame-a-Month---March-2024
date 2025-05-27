@@ -8,9 +8,7 @@ public class HasEnemyBeenGrabbed : BTNode {
         blackboard = bb;
     }
 
-    public HasEnemyBeenGrabbed(Vector2 position) : base(position) {
-    // blackboard will be assigned later at runtime
-    }
+    public HasEnemyBeenGrabbed(Vector2 position) : base(position) {}
 
     protected override NodeState OnTick() {
         return blackboard.enemyGrabbed ? NodeState.Success : NodeState.Failure;

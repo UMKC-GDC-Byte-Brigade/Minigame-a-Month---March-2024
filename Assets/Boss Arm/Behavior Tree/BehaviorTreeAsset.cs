@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "BehaviorTree/TreeAsset")]
 public class BehaviorTreeAsset : ScriptableObject {

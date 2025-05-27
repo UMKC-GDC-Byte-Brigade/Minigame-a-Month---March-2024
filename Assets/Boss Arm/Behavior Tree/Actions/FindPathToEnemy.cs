@@ -9,10 +9,9 @@ public class FindPathToEnemy : BTNode {
         bb = blackboard;
     }
 
-    public FindPathToEnemy(Vector2 position) : base(position) {
-        // Will be overwritten later when blackboard is set
-    }
-    protected override NodeState OnTick() {
+        public FindPathToEnemy(Vector2 position) : base(position) { }
+
+        protected override NodeState OnTick() {
         var start = bb.graph.FindAdjacentNodes(bb.hand.transform.position, "AmbientWaypoint", 100, bb.graph.nodeLayerMask);
         var end = bb.graph.FindAdjacentNodes(bb.enemy.transform.position, "AmbientWaypoint", 100, bb.graph.nodeLayerMask);
 
